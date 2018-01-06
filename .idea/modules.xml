@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/gateway-uaa-allinone-fixed.iml" filepath="$PROJECT_DIR$/gateway-uaa-allinone-fixed.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/geo-service/geo-service.iml" filepath="$PROJECT_DIR$/.idea/modules/geo-service/geo-service.iml" group="geo-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/geo-service/geo-service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/geo-service/geo-service_main.iml" group="geo-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/geo-service/geo-service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/geo-service/geo-service_test.iml" group="geo-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gw-auth-server/gw-auth-server.iml" filepath="$PROJECT_DIR$/.idea/modules/gw-auth-server/gw-auth-server.iml" group="gw-auth-server" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gw-auth-server/gw-auth-server_main.iml" filepath="$PROJECT_DIR$/.idea/modules/gw-auth-server/gw-auth-server_main.iml" group="gw-auth-server" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gw-auth-server/gw-auth-server_test.iml" filepath="$PROJECT_DIR$/.idea/modules/gw-auth-server/gw-auth-server_test.iml" group="gw-auth-server" />
+    </modules>
+  </component>
+</project>

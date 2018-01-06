@@ -1,0 +1,3 @@
+rootProject.name = 'gateway-uaa-allinone-fixed'
+
+include 'gw-auth-server', 'geo-service'
