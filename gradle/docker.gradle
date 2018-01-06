@@ -1,0 +1,28 @@
+buildscript {
+    ext {
+        gradleDockerPluginVersion = '3.2.1'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.bmuschko:gradle-docker-plugin:${gradleDockerPluginVersion}"
+    }
+}
+
+apply plugin: com.bmuschko.gradle.docker.DockerRemoteApiPlugin
+
+
+import com.bmuschko.gradle.docker.tasks.DockerInfo
+import com.bmuschko.gradle.docker.tasks.DockerVersion
+import com.bmuschko.gradle.docker.tasks.image.DockerBuildImage
+
+task dockerInfo(type: DockerInfo) { }
+
+task dockerVersion(type: DockerVersion) { }
+
+task buildDocker(type: DockerBuildImage) {
+    description = "Package application as Docker image"
+    inputDir = project.file(".")
+    tags = ["staleksit/geo-service:latest".toString()]
+}
