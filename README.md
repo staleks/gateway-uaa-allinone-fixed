@@ -39,3 +39,13 @@ $ docker-compose up
 After a while, check localhost:8500 in order to see that all services are up and green in Consul UI.
 
 
+## Testing
+
+1. Check if all services are UP & Running (status Green)
+![Consul UI](images/sc-consul-001.png?raw=true)
+
+2. Get OAuth2 JWT token at GW+Auth. server
+![Getting OAuth2 JWT Token](images/sc-postman-001.png?raw=true)
+
+3. Provide OAuth2 JWT token at Zuul, passing to Resource Server
+![Request at Resource Server](images/sc-postman-002.png?raw=true)
