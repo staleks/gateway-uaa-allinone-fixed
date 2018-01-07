@@ -3,7 +3,7 @@ spring:
     name: gw-auth
   cloud:
     consul:
-      host: localhost
+      host: ${CONSUL_ADDRESS}
       port: 8500
       config:
         enabled: true

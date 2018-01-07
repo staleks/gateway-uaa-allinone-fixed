@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+    consul:
+      image: consul:latest
+      hostname: consul
+      ports:
+        - 8300:8300
+        - 8400:8400
+        - 8500:8500
+        - 8600:53/udp
+
+    geo-service:
+      image: staleksit/geo-service:latest
+      ports:
+        - "9090:9090"
+      environment:
+        - CONSUL_ADDRESS=consul:8500
+      command: /opt/start-service.sh
+      links:
+        - consul
+      depends_on:
+        - consul
+
+    gw-auth:
+      image: staleksit/gw-auth-server:latest
+      ports:
+        - "8080:8080"
+      environment:
+        - CONSUL_ADDRESS=consul:8500
+      command: /opt/start-service.sh
+      links:
+        - consul
+      depends_on:
+        - consul
+        - geo-service
