@@ -49,7 +49,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/health").permitAll()
                 .antMatchers("/console/**").permitAll()
                 .antMatchers("/oauth/token").permitAll()
-                .antMatchers("/geo-service/**").permitAll()
+                .antMatchers("/geo/**").permitAll()
                 .anyRequest().authenticated();
     }
 }
