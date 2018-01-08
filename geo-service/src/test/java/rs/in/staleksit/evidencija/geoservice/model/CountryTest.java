@@ -39,7 +39,4 @@ public class CountryTest {
         Assertions.assertEquals("Srbija", country.getName());
     }
 
-
-
-
 }
