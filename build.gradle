@@ -1,12 +1,14 @@
 buildscript {
     ext {
         springBootVersion = '1.5.9.RELEASE'
+        junit5GradleVersion = '1.0.2'
     }
     repositories {
         mavenCentral()
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath("org.junit.platform:junit-platform-gradle-plugin:${junit5GradleVersion}")
     }
 }
 
@@ -21,6 +23,7 @@ allprojects {
 subprojects {
 
     apply plugin: 'java'
+    apply plugin: 'org.junit.platform.gradle.plugin'
     apply plugin: 'org.springframework.boot'
 
     repositories {
@@ -39,6 +42,12 @@ subprojects {
 
         testCompile('org.springframework.boot:spring-boot-starter-test')
         testCompile('org.springframework.security:spring-security-test')
+
+        // JUnit5
+        testCompile('org.junit.jupiter:junit-jupiter-api:5.0.2')
+        testRuntime('org.junit.jupiter:junit-jupiter-engine:5.0.2')
+        testRuntime('org.junit.platform:junit-platform-runner:1.0.2')
+        testRuntime('org.junit.platform:junit-platform-launcher:1.0.2')
     }
 
 }
